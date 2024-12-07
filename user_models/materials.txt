@@ -1,0 +1,4 @@
+#material: 15.000 0.005 1 0 soil
+#material: 6.000   0.002 1 0 concrete
+#material: 8.000   0.002 1 0 grout
+#material: 1.000   0.000 1 0 half_space

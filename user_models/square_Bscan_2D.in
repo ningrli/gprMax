@@ -1,0 +1,32 @@
+#title: B-scan from a square-void buried in a dielectric half-space
+#domain: 4.8 2.2 0.01
+#dx_dy_dz: 0.01 0.01 0.01
+#time_window: 5e-8
+
+#material: 6 0 1 0 asphalt
+#material: 9 0 1 0 bml
+#material: 12 0 1 0 rbed
+#material: 1 0 1 0 void
+
+#waveform: ricker 1 2.5e8 my_ricker
+#hertzian_dipole: z 0.4 1.8 0 my_ricker
+#rx: 0.8 1.8 0
+#src_steps: 0.05 0 0
+#rx_steps: 0.05 0 0
+
+
+
+#box: 0 0 0 4.8 1.8 0.01 asphalt
+#box: 0 0 0 4.8 1.6 0.01 bml
+#box: 0 0 0 4.8 1.2 0.01 rbed
+#box: 2.2 0.4 0 2.6 0.8 0.01 void
+
+snapshot: 0 0 0 6 2.4 0.004 0.02 0.02 0.02 1e-9 snap1
+
+python:
+for i in range(1,50):
+  print(&#39;#snapshot: 0 0 0 5.000 2.000 2.000 0.040 0.040 0.040 {} snapshot{}&#39;. format((i)*1e-9,i))
+end_python:
+
+
+geometry_view: 0 0 0 4.8 2.2 0.02 0.02 0.02 0.02 square_void_half_space n

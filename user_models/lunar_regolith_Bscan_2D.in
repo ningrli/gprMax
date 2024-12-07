@@ -1,0 +1,18 @@
+#title: A-scan from a lunar regolith buried in a dielectric half-space
+#domain: 15.00 16.00 0.01
+#dx_dy_dz: 0.01 0.01 0.01
+#time_window: 150e-9
+
+#material: 3.2 10e-9 1 0 one
+#material: 4.2 10e-8 1 0 two
+#material: 6.5 10e-6 1 0 three
+
+#waveform: ricker 1 500e6 my_ricker
+#hertzian_dipole: z 0.5 13.30 0 my_ricker
+#rx: 0.8 13.30 0
+#src_steps: 0.1 0 0
+#rx_steps: 0.1 0 0
+
+#box: 0 9.2 0 15 13 0.01 one
+#box: 0 6.00 0 15 9.2 0.01 two
+#box: 0 0 0 15.00 6.00 0.01 three
